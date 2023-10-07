@@ -2,7 +2,6 @@ let hamburgerMenu = document.querySelector(".hamburger")
 let linksMenu = document.querySelector(".menu")
 let closeMenu = document.querySelector(".close-menu")
 let overlay = document.querySelector(".overlay")
-let fs = require('fs')
 hamburgerMenu.addEventListener("click", () => {
   linksMenu.classList.add("open")
   document.body.style.overflowY = "hidden"
@@ -15,12 +14,15 @@ closeMenu.addEventListener("click", () => {
   overlay.style.display = "none"
 
 })
-fs.readdir((err, files) => {
-  if(err){
-    console.log(err)
-  }
-  console.log(files)
-})
+
+// let fs = require('fs')
+
+// fs.readdir((err, files) => {
+//   if(err){
+//     console.log(err)
+//   }
+//   console.log(files)
+// })
 
 
 // function handleClick(){

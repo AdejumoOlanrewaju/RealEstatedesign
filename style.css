@@ -8,6 +8,8 @@
   --light-theme-clr : rgb(18, 183, 186);
   --dark-clr: rgba(0,0,0,.8);
   --btn-radius : 20px 3px 20px 3px;
+  --second-bullet-clr : #fb9804;
+  --third-bullet-clr: #79b31f;
 }
 
 body {
@@ -21,6 +23,11 @@ body {
 
 p{
   margin: 0;
+}
+
+img{
+  max-width : 100%;
+  display : block;
 }
 
 .container{
@@ -37,6 +44,8 @@ p{
   display: none;
 
 }
+
+/* beginning of nav */
 
 nav .container{
   display : flex;
@@ -116,7 +125,7 @@ nav .container .links-container .links{
   opacity : .8;
   text-shadow: 0px 0px 7px rgb(0 0 0 / 40%);
   cursor : pointer;
-  color: var(--dark-clr);
+  color: rgb(255 255 255 / 100%);;
   transition : all .5s ;
 }
 
@@ -131,7 +140,7 @@ nav .container .links-container .links::after{
   left : 0;
   width : 0%;
   height : 4px;
-  background : var(--dark-clr);
+  background : rgb(11 239 243);
   border-radius: 30px;
   transition : width .5s;
 }
@@ -139,6 +148,10 @@ nav .container .links-container .links::after{
 nav .container .links-container .links:hover::after{
   width : 100%;
 }
+
+/* end of nav */
+
+/* beginning of header */
 
 header{
   padding-bottom : 20px;
@@ -259,11 +272,11 @@ header .container{
 }
 
 .chart-2 h3::after{
-  background-color : orangered;
+  background-color : var(--second-bullet-clr);
 }
 
 .chart-3 h3::after{
-  background-color: greenyellow
+  background-color: var(--third-bullet-clr);
 }
 
 .header-col-2{
@@ -320,7 +333,7 @@ header .container{
   color: black;
 }
 
-.logos-container{
+.companies-container{
   width: 100%;
   /* height: 70px; */
   background-color: rgb(0 0 0 / 7%);
@@ -331,19 +344,219 @@ header .container{
   flex-wrap : wrap;
   gap: 20px;
   margin-top: -30px;
+  padding: 10px 15px;
 }
 
-.logos-container .logo{
+.companies-container .logo{
   width : 100px;
   height : 70px;
    
 }
 
-.logos-container .logo-II{
+.companies-container .logo-II{
   width : 60px;
   height : 60px;
 }
 
+/* end of header */
+
+/* beginning of main */
+
+.section-1 {
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+  flex-wrap : wrap;
+  /* gap : 30px; */
+}
+
+.section-1 .cta{
+  width : 50%;
+}
+
+.section-1 .cta p{
+  color : rgba(0,0,0,.8);
+  line-height : 1.5;
+  text-align :left;
+}
+
+.section-1 .cta button{
+  display : block;
+  margin : 20px 0;
+  width : 50%;
+  padding : 15px 0;
+  background: var(--theme-clr);
+  color : white;
+}
+
+.section-1 .recommendation {
+  width : 480px;
+}
+
+.section-1 .recommendation h3{
+  font-size : clamp(30px, 4.5vw, 45px);
+  width : 100%;
+  text-align: left;
+  margin : 10px auto 20px;
+}
+
+.section-1 .recommendation h3 span{
+  display : block;
+  width : 100%;
+}
+
+.section-2{
+  display : flex;
+  justify-content : space-between;
+  padding : 30px 0 20px;
+  flex-wrap : wrap;
+}
+
+.section-2 .bullet-banner-container{
+  width: 45%;
+  max-width : 450px;
+}
+
+.section-2 .bullet-banner-container .bullet-banner{
+  height : 600px;
+  width : 100%;
+  border-radius : 5px 200px 5px 5px;
+}
+
+.section-2 .bullet-wrapper{
+  width : 50%;
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  gap : 40px;
+}
+
+.section-2 .bullet-wrapper .bullet-container .bullet{
+  display : flex;
+  align-items : center;
+  gap : 20px;
+  padding : 20px 0;
+}
+
+.bullet-number{
+  width: 20%;
+  max-width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 3px 30px;
+  background-color: var(--light-theme-clr);
+  position : relative;
+}
+
+.bullet-number::after{
+  content: "01";
+  position: absolute;
+  right: -8px;
+  top: -20px;
+  font-size: 30px;
+  font-weight: 600;
+
+}
+
+.bullet-number.second{
+  background-color : var(--second-bullet-clr);
+}
+
+.bullet-number.second::after{
+  content : "02";
+}
+
+.bullet-number.third{
+  background-color : var(--third-bullet-clr);
+}
+
+.bullet-number.third::after{
+  content : "03"
+}
+
+.engineers-section .text-container{
+  text-align : center;
+}
+
+.text-container h3{
+  font-size : 40px;
+  margin-bottom : 10px;
+}
+
+.engineers-card-container{
+  display : flex;
+  justify-content : space-around;
+  align-items : center;
+  flex-wrap : wrap;
+  gap : 20px;
+  padding : 30px 0px;
+}
+
+.engineers-card{
+  width : 200px;
+  /* height : 200px; */
+  box-shadow : 0px 8px 20px 4px rgb(0 0 0 / 8%);
+  border-radius : 10px;
+  padding : 10px;
+  text-align : center;
+}
+
+.icons-container{
+  display : flex;
+  align-items : center;
+  justify-content: space-between;
+}
+
+.icons-container .star-icon{
+  width : 30px;
+  height : 30px;
+  cursor : pointer;
+}
+
+.icons-container .more{
+  display : flex;
+  flex-direction : column;
+  gap : 4px;
+  cursor : pointer;
+}
+
+.icons-container .more span{
+  width : 4px;
+  height : 4px;
+  border-radius : 50%;
+  background : black;
+}
+
+.profile-info {
+  text-align : center;
+}
+
+.profile-info img{
+  display : inline-block;
+  width : 80px;
+  height : 80px;
+  border-radius : 50%;
+  object-fit: cover;
+  margin-top : 10px;
+}
+
+.profile-info h3{
+  margin : 10px 0px 2px;
+}
+
+.profile-info p{
+  font-size: 14px;
+  color: rgba(0,0,0,.7);
+}
+
+.tel{
+  color: rgba(0,0,0,.8);
+  margin-top: 20px;
+}
+
+.email-text{
+  color : var(--theme-clr)
+}
 
 @media(max-width : 1100px){
   nav .container .links-container{
@@ -379,6 +592,40 @@ header .container{
     padding: 25px 15px;
     border-radius: 10px;
   }
+
+  nav .container .links-container .links{
+    color: black;
+    text-shadow : none
+  }
+
+  .section-1 .cta{
+    width : 100%;
+    order : 2;
+    text-align: center
+  }
+
+  .section-1 .cta p{
+    text-align: center;
+
+  }
+
+  .section-1 .cta button{
+    margin : 20px auto 30px;
+  }
+  
+  .section-1 .recommendation{
+    width : 100%;
+    text-align: center;
+    order : 1;
+
+  }
+  .section-1 .recommendation h3{
+    text-align : center;
+  }
+
+
+
+  
 
   /* .header-banner-img{
     height : 800px;
@@ -426,6 +673,27 @@ header .container{
   .logos-container{
     margin-top : 30px;
   }
+
+  .companies-container{
+    margin-top: 30px;
+  }
+
+  /* .section-2 {
+    flex-direction : column;
+    align-items : center;
+  } */
+  
+  .section-2 .bullet-banner-container{
+    width : 100%;
+    max-width : 700px;
+    margin : 0 auto;
+  }
+  
+  .section-2 .bullet-wrapper{
+    width : 90%;
+    padding-top: 40px;
+    margin : 0 auto;
+  }
 }
 
 @media(max-width : 450px){
@@ -435,6 +703,10 @@ header .container{
   }
 
   .header-banner-img{
+    height : 500px;
+  }
+
+  .section-2 .bullet-banner-container .bullet-banner{
     height : 500px;
   }
 }

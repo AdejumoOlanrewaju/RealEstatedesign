@@ -226,6 +226,7 @@ header .container{
   position : relative;
   overflow: hidden;
   isolation: isolate;
+  background : transparent;
 }
 
 .header-col-1 .btn-container .btn-2::after{
@@ -668,6 +669,10 @@ header .container{
   /* transform : rotate(180deg); */
 } 
 
+.text-II{
+  padding-right : 15px;
+}
+
 /* BEGINNING OF SECTION 5 */
 .section-5{
   margin-top : 40px;
@@ -680,6 +685,10 @@ header .container{
 .contact-text-container h3{
   margin : 0 0 10px 0;
   font-size : clamp(45px, 4.5vw, 25px);
+}
+
+.contact-text-container p{
+  padding-inline: 10px;
 }
 
 .section-5 .container{
@@ -796,7 +805,7 @@ header .container{
   justify-content: flex-end;
   gap : 15px;
   width : clamp(250px, 45%, 500px);
-  height : 300px;
+  height : 350px;
   background-repeat : no-repeat;
   background-size : cover;
   background-position : center;
@@ -1028,6 +1037,7 @@ header .container{
 
   .section-2 .bullet-banner-container .bullet-banner{
     height : 500px;
+    border-radius : 5px 150px 5px 5px;
   }
 
   .send-btn{
